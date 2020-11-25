@@ -62,8 +62,18 @@ public interface ProcessorConfig {
 
     // ARouter api 的 Call 高层标准
     String CALL = AROUTER_API_PACKAGE + ".Call";
+    String PARCELABLE = "android.os.Parcelable";
     // RouterManager类名
     String ROUTER_MANAGER = "RouterManager";
 
     String ROUTER_CONSTANT_PACKAGE = "com.simple.arouter.constant";
+    public static final String BYTEARRAY = "byte[]";
+    public static final String SHORTARRAY = "short[]";
+    public static final String BOOLEANARRAY = "boolean[]";
+    public static final String CHARARRAY = "char[]";
+    public static final String DOUBLEARRAY = "double[]";
+    public static final String FLOATARRAY = "float[]";
+    public static final String INTARRAY = "int[]";
+    public static final String LONGARRAY = "long[]";
+    public static final String STRINGARRAY = "java.lang.String[]";
 }

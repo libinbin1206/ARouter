@@ -35,3 +35,7 @@ dependencies {
     // 引入注解中RouterBean对象（java项目才有javax.lang包）
     implementation project(':arouter_annotation')
 }
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

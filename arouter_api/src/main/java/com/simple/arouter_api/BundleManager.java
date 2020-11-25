@@ -3,9 +3,13 @@ package com.simple.arouter_api;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * 跳转时 ，用于参数的传递
@@ -43,12 +47,36 @@ public class BundleManager {
         return this;
     }
 
-    public BundleManager withBundle(Bundle bundle) {
-        this.bundle = bundle;
+    public BundleManager withFloat(@NonNull String key, @Nullable float value) {
+        bundle.putFloat(key, value);
         return this;
     }
 
-    // Derry只写到了这里，可以自己增加 ...
+    public BundleManager withParcelable(@NonNull String key, @Nullable Parcelable value) {
+        bundle.putParcelable(key, value);
+        return this;
+    }
+
+
+    public BundleManager withSerializable(@NonNull String key, @Nullable Serializable value) {
+        bundle.putSerializable(key, value);
+        return this;
+    }
+
+    public BundleManager withStringArrayList(@NonNull String key, @Nullable ArrayList<String> value) {
+        bundle.putStringArrayList(key, value);
+        return this;
+    }
+
+    public BundleManager withIntegerArrayList(@NonNull String key, @Nullable ArrayList<Integer> value) {
+        bundle.putIntegerArrayList(key, value);
+        return this;
+    }
+
+    public BundleManager withParcelableArrayList(@NonNull String key, @Nullable ArrayList<Parcelable> value) {
+        bundle.putParcelableArrayList(key, value);
+        return this;
+    }
 
     // 直接完成跳转
     public Object navigation(Context context) {
